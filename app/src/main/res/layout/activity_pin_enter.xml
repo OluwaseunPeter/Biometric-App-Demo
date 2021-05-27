@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PinEnterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Please enter your 4 digit pin"
+            android:textAlignment="center"
+            android:textSize="16dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/pin_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:textColorHint="@color/black">
+
+            <requestFocus />
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/pin_set_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm" />
+
+        <ImageButton
+            android:id="@+id/finger_print"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:foreground="@drawable/fingerprint"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:id="@+id/forgot_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forget Pin?"
+            android:textAlignment="center"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

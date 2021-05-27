@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PinSetActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:orientation="vertical"
+      android:padding="16dp">
+
+    <TextView
+        android:id="@+id/pin_set_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Set 4 Digit Pin Number"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp"
+        android:textSize="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/pin_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/black"
+        android:gravity="center"
+        >
+      <requestFocus/>
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pin_set_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Pin"/>
+  </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
